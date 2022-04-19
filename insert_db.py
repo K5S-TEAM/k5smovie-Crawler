@@ -2,13 +2,13 @@ import pymysql
 from openpyxl import load_workbook
 
 # DB 연결
-con = pymysql.connect(host='db-hotmovie.cv0xzoma7waa.ap-northeast-2.rds.amazonaws.com', user='admin', password='hotmovie',db='k5smovie', charset='utf8') # 한글처리 (charset = 'utf8')
+con = pymysql.connect(host='********', user='****', password='****',db='****', charset='utf8') # 한글처리 (charset = 'utf8')
 
 # 커서 만들기
 cur = con.cursor()
 
 # 영화 정보 엑셀 파일 읽기
-wb = load_workbook("k5smovie.xlsx", data_only=True)
+wb = load_workbook("****.xlsx", data_only=True)
 ws = wb.active
 real_list = []
 for x in range(2, ws.max_row+1):
@@ -33,9 +33,9 @@ for x in range(2, ws.max_row+1):
 # cur.execute(sql)
 
 # 영화 정보 DB에 삽입
-sql = "insert into mv_table values(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
-# s3 링크 https://hotmovie.s3.ap-northeast-2.amazonaws.com/imgs/190695.png
-path = "https://hotmovie.s3.ap-northeast-2.amazonaws.com/imgs/"
+sql = "insert into **** values(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+# s3에 있는 이미지폴더 링크 
+path = "****"
 
 for i in range(len(real_list)):
 	path2 = path + real_list[i][0] + ".png"
