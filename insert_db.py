@@ -19,7 +19,7 @@ for x in range(2, ws.max_row+1):
 		else:
 			if y == 8:
 				tmp_str = ws.cell(row=x, column=y).value
-				tmp_str = tmp_str.replace("_x000D_\xa0"," ")
+				tmp_str = tmp_str.replace("_x000D_"," ")
 				tmp_str = tmp_str.replace("\xa0"," ")
 				list.append(tmp_str)
 			else:
