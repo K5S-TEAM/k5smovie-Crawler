@@ -17,7 +17,7 @@ for x in range(2, ws.max_row+1):
 		if ws.cell(row=x, column=y).value == None:
 			break
 		else:
-			if y == 8:
+			if y == 9:
 				tmp_str = ws.cell(row=x, column=y).value
 				tmp_str = tmp_str.replace("_x000D_"," ")
 				tmp_str = tmp_str.replace("\xa0"," ")
